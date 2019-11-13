@@ -197,7 +197,7 @@ void searchFOR(list<string> &list) {
     string name;
     cin >> name;
     cout << endl;
-    cout << "NATION \tCITY \tPORT-NAME \tPORT-CODE" << endl;
+    cout  << "NATION" << setw(18) << "CITY" << setw(18) << "PORT-NAME" << setw(18) << "PORT-CODE" << endl;
     cout << endl;
     
     for (it = list.begin(); it != list.end(); it++) {
@@ -208,17 +208,17 @@ void searchFOR(list<string> &list) {
             //display city
             cout << "\t";
             auto ax = prev(it, 1);
-            cout << *ax << " ";
+            cout << setw(18) << *ax << " ";
             
             //display airport name
             cout << "\t";
             auto bx = prev(it, 2);
-            cout << *bx << " ";
+            cout << setw(18) << *bx << " ";
             
             //display airport code
             cout << "\t";
             auto cx = next(it, 1);
-            cout << *cx << " ";
+            cout << setw(12) << *cx << " ";
             cout << endl;
         }
     }
